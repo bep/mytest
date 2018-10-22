@@ -1,6 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "fr"
-title = "My New Hugo Site"
+title = "Test for reporting gohugo.io bug "
 
 # Build robots.txt file
 enableRobotsTXT = true
