@@ -12,7 +12,7 @@
 More information : <a href="https://discourse.gohugo.io/t/is-it-possible-to-have-global-params-in-a-multilingual-site/14773/3" target="_blank">
  https://discourse.gohugo.io/t/is-it-possible-to-have-global-params-in-a-multilingual-site/14773/3</a>
 
-<h2> Paramètre globaux</h2>
+<h2> Results : Golobal parameters</h2>
 
 .Site.IsMultiLingual : {{ .Site.IsMultiLingual }}<br>
 .Site.Languages : {{ .Site.Languages }}<br>
@@ -20,19 +20,80 @@ More information : <a href="https://discourse.gohugo.io/t/is-it-possible-to-have
 .Site.Language : {{ .Site.Language }}<br>
 .Site.LanguageCode : {{ .Site.LanguageCode }}<br>
 
-<h2>Parametres de params.agenda]</h2>
+<h2>[params.agenda] parametres</h2>
 
 <p>
 .Site.Params.agenda.id : {{ .Site.Params.agenda.id }}<br>
 .Site.Params.agenda.title : {{ .Site.Params.agenda.title }}<br>
 </p>
 
-<h2>Parametres de params.global.agenda]</h2>
+<h2>[params.global.agenda] parameters</h2>
 
 <p>
 .Site.Params.global.agenda.id : {{ .Site.Params.global.agenda.id }}<br>
 .Site.Params.global.agenda.title : {{ .Site.Params.global.agenda.title }}<br>
 </p>
+
+<h2>Content of config.toml</h2>
+
+<pre>
+baseURL = "http://example.org/"
+languageCode = "fr"
+title = "Test for reporting gohugo.io bug "
+
+# Build robots.txt file
+enableRobotsTXT = true
+enableGitInfo = true
+pygmentsCodeFences = true
+defaultContentLanguageInSubdir = false
+defaultContentLanguage = "fr"
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+
+[params]
+    [params.agenda]
+        id      = "params.agenda.id ROOT"
+        title   = "params.agenda.title ROOT"
+    [params.global]
+        robots = "index,follow"
+        [params.global.agenda]
+            id      = "params.global.agenda.id ROOT"
+            title   = "params.global.agenda.title ROOT"
+    [[params.listeLangues]]
+        code = "fr"
+    [[params.listeLangues]]
+        code = "en"
+
+[languages]
+    [languages.fr]
+        languageCode = "fr-fr"
+        title = "languages.fr.title"
+    [languages.fr.params.agenda]
+        enable  = true
+        id      = "languages.fr.params.agenda.id FRANCAIS"
+        # title   = "languages.fr.params.agenda.title FRANCAIS"
+
+    ## If you remove this section global you get [params.global.agenda] values
+    ## if you COMMENT id from this section you get empty values for id instead of ROOT value
+    # [languages.fr.global]
+    #    [languages.fr.global.agenda]
+    #        # id      = "languages.en.params.global.agenda.id FRANCAIS"
+    #        title   = "languages.en.params.global.agenda.title FRANCAIS"
+
+    [languages.en]
+        languageCode = "en"
+        title = "languages.en.title"
+    [languages.en.params.agenda]
+        enable  = true
+        # id      = "languages.en.params.agenda.id ENGLISH"
+        title   = "languages.en.params.agenda.title ENGLISH"
+
+    [languages.en.params.global]
+        [languages.en.params.global.agenda]
+            id      = "languages.en.params.global.agenda.id ENGLISH"
+            title   = "languages.en.params.global.agenda.title ENGLISH"
+
+</pre>
+
 
     </body>
 </html>
