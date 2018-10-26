@@ -11,6 +11,9 @@ defaultContentLanguage = "fr"
 disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
 
 [params]
+    description = "something from ROOT."
+    twitter_handle = "3Languages ROOT"
+
     [params.case_1_lang]
         id      = "params.case_1_lang.id ROOT"
         title   = "params.case_1_lang.title ROOT"
@@ -33,6 +36,8 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
         languageCode = "fr-fr"
         title = "languages.fr.title"
 
+        twitter_handle = "3Languages_france"
+
         [languages.fr.params.case_1_lang]
             id      = "languages.fr.params.case_1_lang.id FRANCAIS"
             title   = "languages.fr.params.case_1_lang.title FRANCAIS"
@@ -43,6 +48,9 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
     [languages.en]
         languageCode = "en"
         title = "languages.en.title"
+
+        description = "Everything you need to know about the three languages."
+        twitter_handle = "3Languages_english"
 
         [languages.en.params.case_1_lang]
             id      = "languages.en.params.case_1_lang.id ANGLAIS"
