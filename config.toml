@@ -11,14 +11,18 @@ defaultContentLanguage = "fr"
 disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
 
 [params]
-    [params.agenda]
-        id      = "params.agenda.id ROOT"
-        title   = "params.agenda.title ROOT"
-    [params.global]
-        robots = "index,follow"
-        [params.global.agenda]
-            id      = "params.global.agenda.id ROOT"
-            title   = "params.global.agenda.title ROOT"
+    [params.case_1_lang]
+        id      = "params.case_1_lang.id ROOT"
+        title   = "params.case_1_lang.title ROOT"
+
+    [params.case_problem]
+        id      = "params.case_problem.id ROOT"
+        title   = "params.case_problem.title ROOT"
+
+    [params.case_3_nolang]
+        id      = "params.case_3_nolang.id ROOT"
+        title   = "params.case_3_nolang.title ROOT"
+
     [[params.listeLangues]]
         code = "fr"
     [[params.listeLangues]]
@@ -28,27 +32,21 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
     [languages.fr]
         languageCode = "fr-fr"
         title = "languages.fr.title"
-    [languages.fr.params.agenda]
-        enable  = true
-        id      = "languages.fr.params.agenda.id FRANCAIS"
-        # title   = "languages.fr.params.agenda.title FRANCAIS"
 
-    ## If you remove this section global you get [params.global.agenda] values
-    ## if you COMMENT id from this section you get empty values for id instead of ROOT value
-    # [languages.fr.global]
-    #    [languages.fr.global.agenda]
-    #        # id      = "languages.en.params.global.agenda.id FRANCAIS"
-    #        title   = "languages.en.params.global.agenda.title FRANCAIS"
+        [languages.fr.params.case_1_lang]
+            id      = "languages.fr.params.case_1_lang.id FRANCAIS"
+            title   = "languages.fr.params.case_1_lang.title FRANCAIS"
+        [languages.fr.params.case_problem]
+            # id      = "languages.fr.params.case_problem.id FRANCAIS"
+            title   = "languages.fr.params.case_problem.title FRANCAIS"
 
     [languages.en]
         languageCode = "en"
         title = "languages.en.title"
-    [languages.en.params.agenda]
-        enable  = true
-        # id      = "languages.en.params.agenda.id ENGLISH"
-        title   = "languages.en.params.agenda.title ENGLISH"
 
-    [languages.en.params.global]
-        [languages.en.params.global.agenda]
-            id      = "languages.en.params.global.agenda.id ENGLISH"
-            title   = "languages.en.params.global.agenda.title ENGLISH"
+        [languages.en.params.case_1_lang]
+            id      = "languages.en.params.case_1_lang.id FRANCAIS"
+            title   = "languages.en.params.case_1_lang.title FRANCAIS"
+        [languages.en.params.case_problem]
+            # id      = "languages.en.params.case_problem.id FRANCAIS"
+            title   = "languages.en.params.case_problem.title FRANCAIS"

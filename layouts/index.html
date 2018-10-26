@@ -9,8 +9,8 @@
     <body>
         <h1>Page de test gohugo.io</h1>
 
-More information : <a href="https://discourse.gohugo.io/t/is-it-possible-to-have-global-params-in-a-multilingual-site/14773/3" target="_blank">
- https://discourse.gohugo.io/t/is-it-possible-to-have-global-params-in-a-multilingual-site/14773/3</a>
+More information : <a href="https://discourse.gohugo.io/t/is-it-possible-to-have-case_problem-params-in-a-multilingual-site/14773/3" target="_blank">
+ https://discourse.gohugo.io/t/is-it-possible-to-have-case_problem-params-in-a-multilingual-site/14773/3</a>
 
 <h2> Results : Golobal parameters</h2>
 
@@ -20,80 +20,26 @@ More information : <a href="https://discourse.gohugo.io/t/is-it-possible-to-have
 .Site.Language : {{ .Site.Language }}<br>
 .Site.LanguageCode : {{ .Site.LanguageCode }}<br>
 
-<h2>[params.agenda] parametres</h2>
+<h2>[params.case_1_lang] parametres</h2>
 
 <p>
-.Site.Params.agenda.id : {{ .Site.Params.agenda.id }}<br>
-.Site.Params.agenda.title : {{ .Site.Params.agenda.title }}<br>
+.Site.Params.case_1_lang.id : {{ .Site.Params.case_1_lang.id }}<br>
+.Site.Params.case_1_lang.title : {{ .Site.Params.case_1_lang.title }}<br>
 </p>
 
-<h2>[params.global.agenda] parameters</h2>
+<h2>[params.case_problem] parameters</h2>
 
 <p>
-.Site.Params.global.agenda.id : {{ .Site.Params.global.agenda.id }}<br>
-.Site.Params.global.agenda.title : {{ .Site.Params.global.agenda.title }}<br>
+.Site.Params.case_problem.id : {{ .Site.Params.case_problem.id }}<br>
+.Site.Params.case_problem.title : {{ .Site.Params.case_problem.title }}<br>
 </p>
 
-<h2>Content of config.toml</h2>
+<h2>[params.case_3_nolang] parameters</h2>
 
-<pre>
-baseURL = "http://example.org/"
-languageCode = "fr"
-title = "Test for reporting gohugo.io bug "
-
-# Build robots.txt file
-enableRobotsTXT = true
-enableGitInfo = true
-pygmentsCodeFences = true
-defaultContentLanguageInSubdir = false
-defaultContentLanguage = "fr"
-disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
-
-[params]
-    [params.agenda]
-        id      = "params.agenda.id ROOT"
-        title   = "params.agenda.title ROOT"
-    [params.global]
-        robots = "index,follow"
-        [params.global.agenda]
-            id      = "params.global.agenda.id ROOT"
-            title   = "params.global.agenda.title ROOT"
-    [[params.listeLangues]]
-        code = "fr"
-    [[params.listeLangues]]
-        code = "en"
-
-[languages]
-    [languages.fr]
-        languageCode = "fr-fr"
-        title = "languages.fr.title"
-    [languages.fr.params.agenda]
-        enable  = true
-        id      = "languages.fr.params.agenda.id FRANCAIS"
-        # title   = "languages.fr.params.agenda.title FRANCAIS"
-
-    ## If you remove this section global you get [params.global.agenda] values
-    ## if you COMMENT id from this section you get empty values for id instead of ROOT value
-    # [languages.fr.global]
-    #    [languages.fr.global.agenda]
-    #        # id      = "languages.en.params.global.agenda.id FRANCAIS"
-    #        title   = "languages.en.params.global.agenda.title FRANCAIS"
-
-    [languages.en]
-        languageCode = "en"
-        title = "languages.en.title"
-    [languages.en.params.agenda]
-        enable  = true
-        # id      = "languages.en.params.agenda.id ENGLISH"
-        title   = "languages.en.params.agenda.title ENGLISH"
-
-    [languages.en.params.global]
-        [languages.en.params.global.agenda]
-            id      = "languages.en.params.global.agenda.id ENGLISH"
-            title   = "languages.en.params.global.agenda.title ENGLISH"
-
-</pre>
-
+<p>
+.Site.Params.case_3_nolang.id : {{ .Site.Params.case_3_nolang.id }}<br>
+.Site.Params.case_3_nolang.title : {{ .Site.Params.case_3_nolang.title }}<br>
+</p>
 
     </body>
 </html>
