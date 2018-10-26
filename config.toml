@@ -45,8 +45,8 @@ disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
         title = "languages.en.title"
 
         [languages.en.params.case_1_lang]
-            id      = "languages.en.params.case_1_lang.id FRANCAIS"
-            title   = "languages.en.params.case_1_lang.title FRANCAIS"
+            id      = "languages.en.params.case_1_lang.id ANGLAIS"
+            title   = "languages.en.params.case_1_lang.title ANGLAIS"
         [languages.en.params.case_problem]
-            # id      = "languages.en.params.case_problem.id FRANCAIS"
-            title   = "languages.en.params.case_problem.title FRANCAIS"
+            # id      = "languages.en.params.case_problem.id ANGLAIS"
+            title   = "languages.en.params.case_problem.title ANGLAIS"
