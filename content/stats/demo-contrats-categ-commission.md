@@ -25,4 +25,4 @@ graph_type: "pie"
 graph_default: 2
 ---
 
-{{% csvdata-stats csvfile="csv/demo-contrat-test.csv" %}}
+{{< csvdata-stats csvfile="csv/demo-contrat-test.csv" >}}

@@ -1,5 +1,3 @@
-{{ $_hugo_config := `{ "version": 1 }` }}
-
 <!--    Shortcode générique
         Traitement de CSV brut et non aggrégé
         Attention : On met du business logic dans le frontal de présentation !!
@@ -13,6 +11,7 @@
         - csvDATE_FIN   = numcol_date_fin
         - csv_graph_type = graph_type
 -->
+
 
 <!-- Physical File as parameter -->
 {{ if .Get "csvfile" }}
