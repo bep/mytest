@@ -1,4 +1,4 @@
 # mytest
 Repo for testing minimal hugo / bug
 
-Original post [https://discourse.gohugo.io/t/is-it-possible-to-have-case_problem-params-in-a-multilingual-site/14773/3](https://discourse.gohugo.io/t/is-it-possible-to-have-case_problem-params-in-a-multilingual-site/14773/3)
+Original post [https://github.com/gohugoio/hugo/issues/5831](https://github.com/gohugoio/hugo/issues/5831)
