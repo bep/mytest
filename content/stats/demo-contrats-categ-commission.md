@@ -5,8 +5,8 @@ weight: 180
 
 mode_bootstrap: false
 
-detail_tableau: false
-detail_tableau_court: false
+detail_tableau: true
+detail_tableau_court: true
 detail_categ: false
 detail_total: true
 
