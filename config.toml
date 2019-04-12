@@ -1,60 +1,42 @@
-baseURL = "http://example.org/"
-languageCode = "fr"
-title = "Test for reporting gohugo.io bug "
+# baseURL non nécessaire pour consultation directe en filesystem.
+baseURL = "http://10.0.100.152:8000/"
+# Nécessaire pour consultaion directe en filesystem
+relativeURLs = true
+uglyURLs = true
+# Fin des options pour usage file system
+# Option pour usage WebServer
+# canonifyurls = true
 
-# Build robots.txt file
-enableRobotsTXT = true
-enableGitInfo = true
-pygmentsCodeFences = true
-defaultContentLanguageInSubdir = false
-defaultContentLanguage = "fr"
-disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+languageCode = "fr"
+DefaultContentLanguage = "fr"
+
+title = "Stats"
+theme = "uno-master-v2"
+
+disableFastRender = true
+cleanDestinationDir = true
+
+contentdir = "content"
+# publishdir = "../public"
+builddrafts = false
+author = "DG"
+copyright = "Utilise Hugo + https://github.com/chartjs/Chart.js"
+
+disableKinds = ["taxonomy","taxonomyTerm","RSS"]
+
+timeout=30000
+
+[outputs]
+home = [ "HTML"]
 
 [params]
-    description = "something from ROOT."
-    twitter_handle = "3Languages ROOT"
+  version_stats = "0.3.5"
+  description = "Test for hugo 0.55"
+  cover = "/images/background-cover.jpg"
+  logo = "/images/logo-stats.png"
 
-    [params.case_1_lang]
-        id      = "params.case_1_lang.id ROOT"
-        title   = "params.case_1_lang.title ROOT"
+  dateFormat = "02/01/2006"
 
-    [params.case_problem]
-        id      = "params.case_problem.id ROOT"
-        title   = "params.case_problem.title ROOT"
-
-    [params.case_3_nolang]
-        id      = "params.case_3_nolang.id ROOT"
-        title   = "params.case_3_nolang.title ROOT"
-
-    [[params.listeLangues]]
-        code = "fr"
-    [[params.listeLangues]]
-        code = "en"
-
-[languages]
-    [languages.fr]
-        languageCode = "fr-fr"
-        title = "languages.fr.title"
-
-        twitter_handle = "3Languages_france"
-
-        [languages.fr.params.case_1_lang]
-            id      = "languages.fr.params.case_1_lang.id FRANCAIS"
-            title   = "languages.fr.params.case_1_lang.title FRANCAIS"
-        [languages.fr.params.case_problem]
-            # id      = "languages.fr.params.case_problem.id FRANCAIS"
-            title   = "languages.fr.params.case_problem.title FRANCAIS"
-
-    [languages.en]
-        languageCode = "en"
-        title = "languages.en.title"
-
-        description = "Everything you need to know about the three languages."
-        twitter_handle = "3Languages_english"
-
-        [languages.en.params.case_1_lang]
-            id      = "languages.en.params.case_1_lang.id ANGLAIS"
-            title   = "languages.en.params.case_1_lang.title ANGLAIS"
-        [languages.en.params.case_problem]
-            # id      = "languages.en.params.case_problem.id ANGLAIS"
-            title   = "languages.en.params.case_problem.title ANGLAIS"
+  # Pour éviter de traiter les gros fichiers CSV pendant le développement.
+  # modeDev = true
+  modeDev = false
